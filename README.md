@@ -43,7 +43,7 @@ Some basic visualizations was done through matplotlib for Campaign Goal Vs Pledg
 
 
 
-## Exported the below files from the ETL :
+#### Exported the below csv files after data analysis :
 - category.csv
 
 - subcategory.csv
