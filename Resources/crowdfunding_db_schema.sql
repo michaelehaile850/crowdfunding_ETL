@@ -3,8 +3,8 @@ create table category(
 		category_id varchar(4) primary key unique,
 		category_name varchar(100)
 		);
-		
 select * from category;
+
 
 
 create table subcategory(
@@ -12,6 +12,7 @@ create table subcategory(
 		subcategory_name varchar(100)
 		);
 select * from subcategory;
+
 
 
 create table contacts(
@@ -23,7 +24,6 @@ create table contacts(
 select * from contacts;
 
 
-
 CREATE TABLE campaign (
     cf_id INT PRIMARY KEY unique,
     contact_id INT,
@@ -33,12 +33,12 @@ CREATE TABLE campaign (
     pledged FLOAT,
     outcome VARCHAR(50),
     backers_count INT,
-    country VARCHAR(50),
-    currency VARCHAR(50),
-    launch_date TIMESTAMP WITHOUT TIME ZONE,
-    end_date TIMESTAMP WITHOUT TIME ZONE,
-    category_id VARCHAR(4) ,
-    subcategory_id VARCHAR(8) ,
+    country VARCHAR(2),
+    currency VARCHAR(3),
+    launched_date date,
+    end_date date,
+    category_id VARCHAR(4),
+    subcategory_id VARCHAR(8),
     FOREIGN KEY (contact_id) REFERENCES contacts(contact_id),
     FOREIGN KEY (category_id) REFERENCES category(category_id),
     FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id)
